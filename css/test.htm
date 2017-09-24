@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+    <head>
+
+        <meta charset="utf-8">
+        <title> Welcome to BooKart </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="css/app.css"
+
+    </head>
+<body >
+    <div id="headerWrapper" ng-controller="HeaderCtrl" ng-app="myApp">
+        <div >
+        <span class="logo pull-left">{{title}}</span>
+        <span class="tagline pull-left">{{tagline}}</span>
+        <div class="nav-wrapper pull-left">
+            <ul class="nav nav-pills">
+                <li class ="active"><a href="#">Books</a></li>
+                <li><a href="#">Kart</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div >
+      <form   role="form">
+            <div class="form-group">
+                <input type="text" class="searchbar form-control " placeholder="Search here...">
+            </div>
+        </form>
+    
+    </div>
+    <div id="bookListWrapper">
+        
+        <div >
+            <ul class="list-unstyled">
+            <li class="book1" style="background: white url(css/stephen.jpg) no-repeat">
+            <div class="book-details clearfix" >
+                <h3>Sleeping Beauties: A Novel</h3>
+                <p> by Stephen King and Owen King</p>
+                <p> $19 </p>
+                <ul class="list-unstyled ">
+                    <li >Rating: 4</li>
+                    <li  > Binding: Hardcover</li>
+                </ul>
+                <button class="btn btn-info pull-right">Add to Kart</button>
+            </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+        
+        <div id="bookListWrapper" >
+        <div ng-app="myApps" ng-controller="bookListCtrl" >
+            <ul class="list-unstyled" >
+                <!--<p>{{x}}</p>-->
+            <li class="book" style="background: white url({{bookItem.imgUrl}}) no-repeat" ng-repeat="bookItem in booklist">
+            <div class="book-details clearfix" >
+                
+                <h3>{{bookItem.name}}</h3>
+                <p>{{bookItem.author}}</p>
+                <p> {{bookItem.price}} </p>
+                
+                <ul class="list-unstyled "> 
+                    <li >{{bookItem.rating}}</li>
+                    <li  >{{bookItem.binding}}</li>
+                </ul>
+                <button class="btn btn-info pull-right">Add to Kart</button>
+            </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+    
+<script src="css/app.js"></script>
+<!--<script angular.bootstrap(document.getElementById("bookListWrapper"), ['listofbooks'])></script>-->
+</body>
+
+
+</html>

@@ -1,0 +1,99 @@
+﻿#headerWrapper{
+    width:100%;
+}
+
+.logo{
+    padding:10px;
+    margin-right: 10x;
+    font-size: 35px;
+    font-family: fantasy;
+}
+.tagline{
+    font-size: 10px;
+    font-family: monospace;
+    margin-top: 50px;
+    margin-left: -123px;
+}
+.nav-wrapper{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#bookListWrapper{
+    width: 100%;
+    /*padding: 30px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#bookListWrapper1{
+    width: 100%;
+    /*padding: 30px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#bookListWrapper input{
+    width: 25%;
+}
+#bookListWrapper .book{
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+        margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+}
+#bookListWrapper .book1{
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+}
+#bookListWrapper .book .book-details{
+    margin-left: 190px;
+    
+}
+#bookListWrapper .book1 .book-details{
+    margin-left: 190px;
+    
+}
+.searchbar {max-width: 25%;
+
+}
+
+.container.ng-enter{
+    -webkit-transition: 0.5s linear all;
+    /*-moz-transition : 0.5s linear all;
+    -o-transition: 0.5s linear all;*/
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+.container.ng-enter-active{
+    opacity:1;
+}
+.book1.ng-leave{
+    -webkit-transition: 0.5s linear all;
+    /*-moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;*/
+    transition: 0.5s linear all;
+    opacity: 1;
+    left: 0;
+}
+.book1.ng-leave-active{
+    opacity: 0;
+    left:600px;
+}
+.book1.ng-enter{
+    -webkit-transition: 0.5s linear all;
+    /*-moz-transition: 0.5s linear all;
+    -o-transition: 0.5s linear all;*/
+    transition: 0.5s linear all;
+    opacity: 0;
+    left: 600px;
+}
+.book1.ng-enter-active{
+    opacity: 1;
+    left:0;
+}
